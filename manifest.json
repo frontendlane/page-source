@@ -1,0 +1,21 @@
+{
+    "manifest_version": 2,
+    "name": "Page Source",
+    "version": "0.1",
+
+    "description": "Start front-end code playground with a single click.",
+
+    "permissions": [
+        "tabs"
+    ],
+
+    "browser_action": {
+        "default_title": "Start front-end code playground."
+    },
+
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    }
+}
