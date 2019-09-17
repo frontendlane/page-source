@@ -57,7 +57,8 @@
                     + (document.doctype.systemId ? ' "' + document.doctype.systemId + '"' : '')
                     + '>';
                 css.innerHTML = css.innerHTML.replace(/<br>/g, '\n');
-                clipboardCopy('data:text/html;base64,' + btoa(doctype + document.documentElement.outerHTML));
+                const b64Data = btoa(unescape(encodeURIComponent(doctype + document.documentElement.outerHTML)));
+                clipboardCopy('data:text/html;base64,' + b64Data);
             };
 
             window.onload = () => {
