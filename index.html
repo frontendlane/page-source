@@ -76,7 +76,7 @@
                         event.metaKey && event.key === 'Enter' && (preview.innerHTML = event.target.textContent));
                         
                 javascript.addEventListener('keydown', event =>
-                    event.metaKey && event.key === 'Enter' && eval(event.target.textContent));
+                    (event.metaKey || event.ctrlKey) && event.key === 'Enter' && eval(event.target.textContent));
 
                 consol.addEventListener('click', () => consol.innerHTML = '');
 
